@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="An Academic Project by Rajat Panchotia, Kanika Sharma, Manasi Akhre & Mahak Jain where various predictive models like CNN, DB-VAE, Loss function,algorithmic bias, deep learning, neural networks, facial detection.
+    <meta name="keywords" content="datascience, machine learning,academic project, Rajat Panchotia, Rajat">
+
+    <title>De-biasing Facial Recognition Systems</title>
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-76699034-1', 'auto');
+    ga('require', 'linkid');
+
+    ga('send', 'pageview');
+
+  </script>
+    <!-- Styles -->
+    <link href=assets/css/theDocs.all.min.css rel="stylesheet">
+    <link href=assets/css/custom.css rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:100,300,400,500%7CLato:300,400' rel='stylesheet' type='text/css'>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="../apple-touch-icon.html">
+    <link rel="icon" href="assets/images/favicon.ico">
+   <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Rajat Panchotia |Devloper, Avid Traveller, Skeptic, Hustler and a lifelong learner. I share my life through this blog.</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Rajat Panchotia" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Devloper, Avid Traveller, Skeptic, Hustler and a lifelong learner. I share my life through this blog." />
+<meta property="og:description" content="Devloper, Avid Traveller, Skeptic, Hustler and a lifelong learner. I share my life through this blog." />
+<link rel="canonical" href="https://rajatpanchotia.github.io/De-biasing-Facial-Recognition-Systems-/" />
+<meta property="og:url" content="https://rajatpanchotia.github.io/De-biasing-Facial-Recognition-Systems-/" />
+<meta property="og:site_name" content="Rajat Panchotia" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"https://rajatpanchotia.github.io/De-biasing-Facial-Recognition-Systems-/","headline":"Rajat Panchotia","description":"Developer, Avid Traveller,Skeptic, Hustler and a lifelong learner. I share my life through this blog.","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  </head>
+
+  <body>
+
+
+
+    <header class="site-header navbar-fullwidth">
+      <nav class="navbar navbar-default">
+        <div class="container">
+
+          <!-- Toggle buttons and brand -->
+
+
+            <button type="button" class="navbar-toggle for-sidebar" data-toggle="offcanvas">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+
+
+        </div>
+      </nav>
+
+      <div class="banner banner-full-height overlay-white" style="background-image: url(/assets/images/homepage.jpg);">
+        <div class="container text-left">
+          <h1 class="text-teal"><strong>De-biasing-Facial-Recognition-Systems</strong></h1>
+          <h5 class="text-uppercase">Building a project on De-biasing-Facial-Recognition-Systems</h5>
+          <br>
+          <p class="hidden-xs hidden-sm">An Academic Project by Rajat Panchotia, Kanika Sharma, Manasi Akhre & Mahak Jain where various predictive models like CNN, DB-VAE, Loss function,algorithmic bias, deep learning, neural networks, facial detection.</p>
+          <br>
+
+        </div>
+      </div>
+    </header>
+
+
+
+    <main class="container">
+      <div class="row">
+
+        <!-- Sidebar -->
+        <aside class="col-md-3 col-sm-3 sidebar">
+
+          <ul class="sidenav dropable sticky">
+            <li><a class="active" href=/btp/Facial-Recognition>Overview</a></li>
+            <li>
+              <a href=/btp/datacollection>Data Collection</a>
+            </li>
+
+            <li>
+              <a href=/btp/dataprep>Data Preparation</a>
+            </li>
+
+            <li>
+              <a href = /btp/ourmodel >Our Model</a>
+            </li>
+            <li>
+              <a href = /btp/stats >Statistical Analysis</a>
+            </li>
+            <li>
+              <a href = /btp/graphs >Analysis & Graphs</a>
+            </li>
+
+             <li>
+              <a href = /btp/status >Project Status & Future Work </a>
+            </li>
+
+            <li>
+              <a href = /btp/results>Results & Conclusions</a>
+            </li>
+
+
+
+
+
+          </ul>
+
+        </aside>
+        <!-- END Sidebar -->
+
+
+        <!-- Main content -->
+        <article class="col-md-9 col-sm-9 main-content" role="main">
+
+          <header>
+            <h1>About the Project</h1>
+            <p><strong>De-biasing Facial Recognition Systems/strong> is a B.Tech project </p>
+            <p>e tackle the challenge of integrating debiasing capabilities directly into a model training process that adapts automatically and without supervision to the shortcomings of the training data. Our approach features an end-to-end deep learning algorithm that simultaneously learns the desired task (e.g., facial detection) as well as the underlying latent structure of the training data.
+            </p>
+
+            <ol class="toc">
+              <li><a href="#why">Why this Project?</a></li>
+              <li><a href="#validation">Problem Validation & Market Research</a></li>
+              <li><a href="#tech">Technical Aspects</a></li>
+            </ol>
+          </header>
+
+          <section>
+            <h2 id="why">Why this Project?</h2>
+            <p>Anyone who has booked a flight ticket knows how unexpectedly the prices vary. Airlines use using sophisticated quasi-academic tactics which they call <b>"revenue management"</b> or <b>"yield management"</b>. The cheapest available ticket on a given flight gets more and less expensive over time. This usually happens as an attempt to maximize revenue based on -
+            <ol>
+            <li>Time of purchase patterns (making sure last-minute purchases are expensive)  </li>
+            <li>Keeping the flight as full as they want it (raising prices on a flight which is filling up in order to reduce sales and hold back inventory for those expensive last-minute expensive purchases) </li>
+            </ol>
+
+
+            </p>
+
+            <br>
+
+            <div class="row">
+              <div class="col-md-4 col-sm-6">
+                <div class="promo small-icon left">
+                  <i class="fa fa-tv"></i>
+                  <h3>Flight Trends</h3>
+                  <p>Do airfares change frequently? Do they move in small increments or in large jumps? Do they tend to go up or down over time?</p>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-sm-6">
+                <div class="promo small-icon left">
+                  <i class="fa fa-wrench"></i>
+                  <h3>Best time to Buy</h3>
+                  <p>What is the best time to buy so that the consumer can save the most by taking the least risk?</p>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-sm-6">
+                <div class="promo small-icon left">
+                  <i class="fa fa-cubes"></i>
+                  <h3>Verifying Myths</h3>
+                  <p>Does price increase as we get near to departure date? Is Indigo cheaper than Jet Airways? Are morning flights expensive?</p>
+                </div>
+              </div>
+
+
+
+            </div>
+
+
+          </section>
+
+          <section>
+
+            <h2 id="validation">Problem Validation & Market Research</h2>
+            <p>According to a report, India’s civil aviation industry is on a high-growth trajectory. India aims to become the <b>third-largest aviation market by 2020 </b> and the largest by 2030. Indian domestic air traffic is expected to cross <b>100 million passengers by FY2017</b>, compared to 81 million passengers in 2015, as per Centre for Asia Pacific Aviation (CAPA).
+            </p>
+            <p>
+            According to Google Trends, the search term - <b>"Cheap Air Tickets"</b> is most searched in India. Moreover, as the middle-class of India is exposed to air travel, consumers hunting for cheap prices increases.
+            </p>
+            <br>
+            <img class="img-shadow img-responsive center-block" src="/assets/images/btp/domestic_market.jpg"></img>
+
+          </section>
+
+
+          <section>
+
+            <h2 id="tech">Technical Aspects</h2>
+            <p>The project is basically <b> machine learning & statistic intensive</b>. We used Python for the implementation of the models & automation. </p>
+            <br>
+            <ul class="step-text">
+              <li>
+                <h5>Automated Script to Collect Historical Data</h5>
+                <p>For any prediction/classification problem, we need historical data to work with. In this project, past flight prices for each route collected on a daily basis is needed. Manually collecting data daily is not efficient and thus a python script was run on a remote server which collected prices daily at specfic time. </p>
+              </li>
+
+              <li>
+                <h5>Cleaning & Preparing Data</h5>
+                <p>After we have the data, we need to clean & prepare the data according to the model's requirements. In any machine learning problem, this is the step that is the most important and the most time consuming. We used various statistical techniques & logics and implemented them using built-in R packages.</p>
+              </li>
+
+              <li>
+                <h5>Analysing & Building Models</h5>
+                <p>Data preparation is followed by analysing the data, uncovering hidden trends and then applying various predictive & classification models on the training set.</p>
+              </li>
+
+              <li>
+                <h5>Merging Models & Accuracy Calculation</h5>
+                <p>Having built various models, we now have to test the models on our testing set and come up with the most suitable metric to calculate the accuracy. Moreover, many a times, merging models and predicting a cummulative target variable proves to be more accurate. </p>
+              </li>
+
+            </ul>
+
+          </section>
+
+
+
+        </article>
+        <!-- END Main content -->
+      </div>
+    </main>
+
+
+
+
+    <!-- Scripts -->
+    <script src="assets/js/theDocs.all.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+  </body>
+
+</html>
